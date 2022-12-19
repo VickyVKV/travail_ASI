@@ -1,0 +1,44 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" href="XMLschema.xsd">
+<collection  titre="Ma bibliographie">
+
+<livre>
+    <auteur prenom="Jean-Guillaume" nom="Dumas"/>
+    <auteur prenom="Pascal" nom="Lafourcade"/>
+    <auteur prenom="Etienne" nom="Roudeix"/>
+    <auteur prenom="Ariane" nom="Tichit"/>
+    <auteur prenom="Sébastien" nom="Varrette"/>
+    <date>2022</date>
+    <titre>Les NFT en 40 questions: Des réponses claires et détaillées pour comprendre les Non Fungible Tokens</titre>
+    <editeur>Dunod</editeur>
+</livre>
+
+<revue>
+    <auteur prenom="Marcos Rogerio" nom="Mazieri"/>
+    <auteur prenom="Isabel Cristina" nom="Scafuto"/>
+    <auteur prenom="Priscila Rezende" nom="da Costa"/>
+    <date>2022</date>
+    <titre>Tokenization, blockchain and web 3.0 technologies as research objects in innovation management</titre>
+    <titre_revue>International Journal of Innovation (São Paulo)</titre_revue>
+    <volume>1</volume>
+    <pages>pp. 1 - 5</pages>
+</revue>
+
+<web>
+    <auteur>Martin, S.</auteur>
+    <date>2022</date>
+    <titre_page>Que sont les NFT ? Définition et guide complet pour débutant</titre_page>
+    <titre_site>International Journal of Innovation (São Paulo)</titre_site>
+    <URL><p>Disponible sur :</p> https://cryptonaute.fr/nft/</URL>
+</web>
+
+<conference>
+    <auteur>Liao, Q. </auteur>
+    <auteur>Gruen, D. </auteur>
+    <auteur>Miller, S.</auteur>
+    <date>2020</date>
+    <titre>Questioning the AI: Informing Design Practices for Explainable AI User Experiences</titre>
+    <nom_conference>Conference on Human Factors in Computing Systems - Proceedings, 2020</nom_conference>
+    <URL>https://arxiv.org/abs/2001.02478</URL>
+</conference>
+</collection>
