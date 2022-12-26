@@ -1,44 +1,166 @@
-<?xml version = "1.0" encoding = "UTF-8" ?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" href="XMLschema.xsd">
-<collection  titre="Ma bibliographie">
-
-<livre>
-    <auteur prenom="Jean-Guillaume" nom="Dumas"/>
-    <auteur prenom="Pascal" nom="Lafourcade"/>
-    <auteur prenom="Etienne" nom="Roudeix"/>
-    <auteur prenom="Ariane" nom="Tichit"/>
-    <auteur prenom="Sébastien" nom="Varrette"/>
-    <date>2022</date>
-    <titre>Les NFT en 40 questions: Des réponses claires et détaillées pour comprendre les Non Fungible Tokens</titre>
-    <editeur>Dunod</editeur>
-</livre>
-
-<revue>
-    <auteur prenom="Marcos Rogerio" nom="Mazieri"/>
-    <auteur prenom="Isabel Cristina" nom="Scafuto"/>
-    <auteur prenom="Priscila Rezende" nom="da Costa"/>
-    <date>2022</date>
-    <titre>Tokenization, blockchain and web 3.0 technologies as research objects in innovation management</titre>
-    <titre_revue>International Journal of Innovation (São Paulo)</titre_revue>
-    <volume>1</volume>
-    <pages>pp. 1 - 5</pages>
-</revue>
-
-<web>
-    <auteur>Martin, S.</auteur>
-    <date>2022</date>
-    <titre_page>Que sont les NFT ? Définition et guide complet pour débutant</titre_page>
-    <titre_site>International Journal of Innovation (São Paulo)</titre_site>
-    <URL><p>Disponible sur :</p> https://cryptonaute.fr/nft/</URL>
-</web>
-
-<conference>
-    <auteur>Liao, Q. </auteur>
-    <auteur>Gruen, D. </auteur>
-    <auteur>Miller, S.</auteur>
-    <date>2020</date>
-    <titre>Questioning the AI: Informing Design Practices for Explainable AI User Experiences</titre>
-    <nom_conference>Conference on Human Factors in Computing Systems - Proceedings, 2020</nom_conference>
-    <URL>https://arxiv.org/abs/2001.02478</URL>
-</conference>
+<?xml version="1.0" encoding="UTF-8"?>
+<collection xmlns:xsi="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="XMLschema.xsd">
+	<livre>
+		<auteur prenom="Jean-Guillaume" nom="Dumas"/>
+		<auteur prenom="Pascal" nom="Lafourcade"/>
+		<auteur prenom="Etienne" nom="Roudeix"/>
+		<auteur prenom="Ariane" nom="Tichit"/>
+		<auteur prenom="Sébastien" nom="Varrette"/>
+		<titre>Les NFT en 40 questions: Des réponses claires et détaillées pour comprendre les Non Fungible Tokens</titre>
+		<editeur>Dunod</editeur>
+		<date>2022</date>
+	</livre>
+	<livre>
+		<auteur prenom="Andrea" nom="Sestino"/>
+		<auteur prenom="Gianluigi" nom="Guido"/>
+		<auteur prenom="Alessandro M" nom="Peluso"/>
+		<titre>Non-Fungible Tokens (NFTs): Examining the Impact on Consumers and Marketing Strategies</titre>
+		<editeur>Cham: Springer International Publishing AG</editeur>
+		<date>2022</date>
+	</livre>
+	<revue>
+		<auteur prenom="Marcos Rogerio" nom="Mazieri"/>
+		<auteur prenom="Isabel Cristina" nom="Scafuto"/>
+		<auteur prenom="Priscila Rezende" nom="da Costa"/>
+		<date>2022</date>
+		<titre>Tokenization, blockchain and web 3.0 technologies as research objects in innovation management</titre>
+		<titre_revue>International Journal of Innovation (São Paulo)</titre_revue>
+		<volume>1</volume>
+		<pages>pp. 1 - 5</pages>
+	</revue>
+	<revue>
+		<auteur prenom="Andrew" nom="Park"/>
+		<auteur prenom="Jan" nom="Kietzmann"/>
+		<auteur prenom="Leyland" nom="Pitt"/>
+		<auteur prenom="Amir" nom="Dabirian"/>
+		<date>2022</date>
+		<titre>The Evolution of Nonfungible Tokens: Complexity and Novelty of NFT Use-Cases</titre>
+		<titre_revue>IT Professional</titre_revue>
+		<volume>24</volume>
+		<pages>pp. 9 - 14</pages>
+	</revue>
+	<revue>
+		<auteur prenom="Kishore" nom="Vasan"/>
+		<auteur prenom="Milán" nom="Janosov"/>
+		<auteur prenom="Albert-László" nom="Barabási"/>
+		<date>2022</date>
+		<titre>Quantifying NFT-driven networks in crypto art</titre>
+		<titre_revue>Scientific Reports</titre_revue>
+		<volume>12</volume>
+		<pages>p. 2769</pages>
+	</revue>
+	<revue>
+		<auteur prenom="David" nom="Serra-Navarro"/>
+		<date>2022</date>
+		<titre>On Blockchain and Art: an interview with Ruth Catlow</titre>
+		<titre_revue>Arte, individuo y sociedad</titre_revue>
+		<volume>31</volume>
+		<pages>pp. 969 – 976</pages>
+	</revue>
+	<revue>
+		<auteur prenom="Henry" nom="Lydiate"/>
+		<date>2021</date>
+		<titre>Crypto Art Business</titre>
+		<titre_revue>Art monthly</titre_revue>
+		<volume>447</volume>
+		<pages>pp. 44–44</pages>
+	</revue>
+	<web>
+		<auteur>Martin, S.</auteur>
+		<date>2022</date>
+		<titre_page>Que sont les NFT ? Définition et guide complet pour débutant</titre_page>
+		<titre_site>International Journal of Innovation (São Paulo)</titre_site>
+		<URL>Disponible sur : https://cryptonaute.fr/nft/ </URL>
+	</web>
+	<web>
+		<auteur>IntelligentHQ</auteur>
+		<date>2020</date>
+		<titre_page>Art + fintech 2.0 blockchain fortnight session: As museums start reopening, can blockchain cultivate a new generation of art patrons?</titre_page>
+		<titre_site>London: Newstex</titre_site>
+		<URL>Disponible sur :  https://www.proquest.com/blogs-podcasts-websites/art-fintech-2-0-blockchain-fortnight-session-as/docview/2417317152/se-2 </URL>
+	</web>
+	<conference>
+		<auteur>Liao, Q. </auteur>
+		<auteur>Gruen, D. </auteur>
+		<auteur>Miller, S.</auteur>
+		<date>2020</date>
+		<titre>Questioning the AI: Informing Design Practices for Explainable AI User Experiences</titre>
+		<nom_conference>Conference on Human Factors in Computing Systems - Proceedings, 2020</nom_conference>
+		<URL>https://arxiv.org/abs/2001.02478</URL>
+	</conference>
+	<conference>
+		<auteur>Schulte, S. </auteur>
+		<auteur>Sigwart, M.</auteur>
+		<auteur>Frauenthaler, P.</auteur>
+		<auteur>Borkowski, M.</auteur>
+		<date>2019</date>
+		<titre>Towards Blockchain Interoperability</titre>
+		<nom_conference>Business Process Management: Blockchain and Central and Eastern Europe Forum</nom_conference>
+		<URL>https://arxiv.org/abs/2001.02478</URL>
+	</conference>
+	<rapport>
+		<auteur>Enissay</auteur>
+		<date>2022</date>
+		<titre>Former Employee Of NFT Marketplace Charged In First Ever Digital Asset Insider Trading Scheme</titre>
+	</rapport>
+	<rapport>
+		<auteur>Ault, Jesse T</auteur>
+		<date>2018</date>
+		<titre>Advancing the science and impact of blockchain technology at Oak Ridge National Laboratory</titre>
+	</rapport>
+	<video>
+		<auteur>Department of Justice (DOJ) Documents</auteur>
+		<date>2021</date>
+		<titre>Les NFT c'est QUOI ? [Vidéo]</titre>
+		<URL>Youtube, https://youtu.be/r7_7-J33HMo</URL>
+	</video>
+	<video>
+		<auteur>On The Media</auteur>
+		<date>2021</date>
+		<titre>The NFT Origin Story [Vidéo]</titre>
+		<URL>https://www-proquest-com.ezproxy.ulb.ac.be/other-sources/nft-origin-story/docview/2730351637/se-2?accountid=17194</URL>
+	</video>
+	<image>
+		<auteur>A. Evans, Teresa; K. Raina, Arun; Delacourte, André; Aprelikova, Olga; Lee, Hyoung-gon; Zhu, Xiongwei; et al.</auteur>
+		<date>2011</date>
+		<titre>All AD cases and all clinically normal cases showing AT8-positive NFT consistent with normal aging were also analyzed for the presence of BRCA1-positive NFT</titre>
+		<agence>figshare</agence>
+		<URL>https://doi.org/10.6084/m9.figshare.55042.v1</URL>
+	</image>
+	<image>
+		<auteur>Avinash, K.</auteur>
+		<date>2021</date>
+		<titre>An automated system for content analysis of blockchain job positions</titre>
+		<agence>figshare</agence>
+		<URL>https://doi.org/10.6084/M9.FIGSHARE.15060438</URL>
+	</image>
+	<these>
+		<auteur>Liddell, F.</auteur>
+		<date>2022</date>
+		<titre>The Crypto-Museum: Investigating the impact of blockchain and NFTs on digital ownership, authority, and authenticity in museums</titre>
+		<p_these>[Thèse de doctorat non publiée]</p_these>
+		<localisation>Angleterre</localisation>
+	</these>
+	<these>
+		<auteur>Alart, J.</auteur>
+		<date>2009</date>
+		<titre>Le dispositif dans le net art. Comment l'arrivée des technologies numériques a modifié le dispositif dans le champ de l'art.</titre>
+		<p_these>[Thèse de doctorat non publiée]</p_these>
+		<localisation>Belgique</localisation>
+	</these>
+	<brevet>
+		<inventeur prenom="John" nom="Fletcher"/>
+		<inventeur prenom="Ying" nom="Chan"/>
+		<date>2022</date>
+		<titre>Blockchain (GB2601328)</titre>
+		<URL>Print.</URL>
+	</brevet>
+	<brevet>
+		<inventeur prenom="Joel Richard" nom="Pennington"/>
+		<inventeur prenom="Deniz" nom="Ozturk"/>
+		<inventeur prenom="Yan" nom="Azdoud"/>
+		<date>2022</date>
+		<titre>ROBOTIC TATTOOING MACHINE WITH AN OPTICAL TATTOO ANALYZER TO ANALYZE TATTOOS ASSOCIATED WITH NON-FUNGIBLE TOKENS (US2022370778)</titre>
+		<URL>Print.</URL>
+	</brevet>
 </collection>
