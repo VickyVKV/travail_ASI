@@ -1,152 +1,111 @@
-<?xml version = "1.0" encoding = "UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-
-<!--éléments-->
-<xs:element name="collection">
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element name="livre">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="auteur" type="nomIndividu"/>
-                        <xs:element name="titre" type="xs:string"/>
-                        <xs:element name="editeur" type="xs:string"/>
-                        <xs:element name="date" type="xs:gYear"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-        </xs:sequence>
-    </xs:complexType>    
-
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element name="revue">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="auteur" type="nomIndividu" minOccurs="1"/>
-                        <xs:element name="date" type="xs:gYear"/>
-                        <xs:element name="titre" type="xs:string"/>
-                        <xs:element name="titre_revue" type="xs:string"/>
-                        <xs:element name="volume" type="xs:integer"/>
-                        <xs:element name="pages" type="xs:string"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-        </xs:sequence>
-    </xs:complexType>   
-
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element name="web">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="auteur" type="xs:string"/>
-                        <xs:element name="date" type="xs:gYear"/>
-                        <xs:element name="titre_page" type="xs:string"/>
-                        <xs:element name="titre_site" type="xs:string"/>
-                        <xs:element name="URL" type="xs:string"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-        </xs:sequence>
-    </xs:complexType>    
-
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element name="conference">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="auteur" type="xs:string"/>
-                        <xs:element name="date" type="xs:gYear"/>
-                        <xs:element name="titre" type="xs:string"/>
-                        <xs:element name="nom_conference" type="xs:string"/>
-                        <xs:element name="lieu" type="xs:string"/>
-                        <xs:element name="URL" type="xs:string"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-        </xs:sequence>
-    </xs:complexType>    
-    
-   <xs:complexType>
-        <xs:sequence>
-            <xs:element name="video">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="auteur" type="xs:string"/>
-                        <xs:element name="date" type="xs:gYear"/>
-                        <xs:element name="titre" type="xs:string"/>
-                        <xs:element name="URL" type="xs:string"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-        </xs:sequence>
-    </xs:complexType>   
-
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element name="image">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="auteur" type="xs:string"/>
-                        <xs:element name="date" type="xs:gYear"/>
-                        <xs:element name="titre" type="xs:string"/>
-                        <xs:element name="agence" type="xs:string"/>
-                        <xs:element name="URL" type="xs:string"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-        </xs:sequence>
-    </xs:complexType>    
-
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element name="rapport">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="auteur" type="xs:string"/>
-                        <xs:element name="date" type="xs:gYear"/>
-                        <xs:element name="titre" type="xs:string"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element name="these">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="auteur" type="xs:string"/>
-                        <xs:element name="date" type="xs:gYear"/>
-                        <xs:element name="titre" type="xs:string"/>
-                        <xs:element name="p_these" type="xs:string"/>
-                        <xs:element name="localisation" type="xs:string"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element name="brevet">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="inventeur" type="nomIndividu" minOccurs="1"/>
-                        <xs:element name="date" type="xs:gYear"/>
-                        <xs:element name="titre" type="xs:string"/>
-                        <xs:element name="URL" type="xs:string"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-        </xs:sequence>
-    </xs:complexType>    
-</xs:element>
-    <!-- type -->
-<xs:complexType name="nomIndividu">
-        <xs:attribute name="prenom" type="xs:string"/>
-        <xs:attribute name="nom" type="xs:string"/>
-</xs:complexType>
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--éléments-->
+	<xs:element name="collection">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="livre" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="auteur" type="nomIndividu" maxOccurs="unbounded"/>
+							<xs:element name="titre" type="xs:string"/>
+							<xs:element name="editeur" type="xs:string"/>
+							<xs:element name="date" type="xs:gYear"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="revue" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="auteur" type="nomIndividu" maxOccurs="unbounded"/>
+							<xs:element name="date" type="xs:gYear"/>
+							<xs:element name="titre" type="xs:string"/>
+							<xs:element name="titre_revue" type="xs:string"/>
+							<xs:element name="volume" type="xs:integer"/>
+							<xs:element name="pages" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="web" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="auteur" type="xs:string" maxOccurs="unbounded"/>
+							<xs:element name="date" type="xs:gYear"/>
+							<xs:element name="titre_page" type="xs:string"/>
+							<xs:element name="titre_site" type="xs:string"/>
+							<xs:element name="URL" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="conference" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="auteur" type="xs:string" maxOccurs="unbounded"/>
+							<xs:element name="date" type="xs:gYear"/>
+							<xs:element name="titre" type="xs:string"/>
+							<xs:element name="nom_conference" type="xs:string"/>
+							<xs:element name="lieu" type="xs:string"/>
+							<xs:element name="URL" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="video" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="auteur" type="xs:string" maxOccurs="unbounded"/>
+							<xs:element name="date" type="xs:gYear"/>
+							<xs:element name="titre" type="xs:string"/>
+							<xs:element name="URL" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="image" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="auteur" type="xs:string" maxOccurs="unbounded"/>
+							<xs:element name="date" type="xs:gYear"/>
+							<xs:element name="titre" type="xs:string"/>
+							<xs:element name="agence" type="xs:string"/>
+							<xs:element name="URL" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="rapport" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="auteur" type="xs:string" maxOccurs="unbounded"/>
+							<xs:element name="date" type="xs:gYear"/>
+							<xs:element name="titre" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="these" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="auteur" type="xs:string" maxOccurs="unbounded"/>
+							<xs:element name="date" type="xs:gYear"/>
+							<xs:element name="titre" type="xs:string"/>
+							<xs:element name="p_these" type="xs:string"/>
+							<xs:element name="localisation" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="brevet" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="inventeur" type="nomIndividu" maxOccurs="unbounded"/>
+							<xs:element name="date" type="xs:gYear"/>
+							<xs:element name="titre" type="xs:string"/>
+							<xs:element name="URL" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- type -->
+	<xs:complexType name="nomIndividu">
+		<xs:attribute name="prenom" type="xs:string"/>
+		<xs:attribute name="nom" type="xs:string"/>
+	</xs:complexType>
 </xs:schema>
